@@ -39,7 +39,14 @@ If you're not using Visual Studio Code you can read the shell commands in `.vsco
 
 #### 7. **Launch the Docker Environment**
 
--   **Task Name**: `docker compose-up`    
+-   **Task Name**: `docker compose-up`    ù
+
+#### 8. **Create a user for the backend**
+
+-   **Task Name**: `yii-run-action`    
+-   **Input**: `users/create`
+-   **Input**: `[username] [email] [password]`
+
 
 ### Additional Information
 
