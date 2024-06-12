@@ -1,0 +1,73 @@
+services:
+  frontend:
+    image: nginx:1.21
+    ports:
+      - 20900:80
+    volumes:
+      - ./:/var/www/html
+      - ./frontend/app.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    links:
+      - php:php
+    networks:
+      - demo-private
+
+  backend:
+    image: nginx:1.21
+    ports:
+      - 20901:80
+    volumes:
+      - ./:/var/www/html
+      - ./backend/app.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    links:
+      - php:php
+    networks:
+      - demo-private
+
+  php:
+    build: php
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - demo-private
+
+  php-cli:
+    build: php-cli
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - demo-private
+
+  mariadb:
+    image: mariadb:11.3.2
+    environment:
+      MYSQL_ROOT_PASSWORD: pippobowie
+      MYSQL_DATABASE: demoapp
+    ports:
+      - 20904:3306
+    networks:
+      - demo-private
+    volumes:
+      - mariadbdata:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 20903:80
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: pippobowie
+      UPLOAD_LIMIT: 300M
+    networks:
+      - demo-private
+
+networks:
+  demo-private:
+    driver: bridge
+    
+volumes:
+  mariadbdata:

@@ -1,0 +1,125 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open frontend",
+            "type": "shell",
+            "command": "start http://localhost:20900",
+            "problemMatcher": []
+        },
+        {
+            "label": "Open backend",
+            "type": "shell",
+            "command": "start http://localhost:20901",
+            "problemMatcher": []
+        },
+        {
+            "label": "Open PhpMyAdmin",
+            "type": "shell",
+            "command": "start http://localhost:20903",
+            "problemMatcher": []
+        },
+        {
+            "label": "docker compose-up",
+            "type": "shell",
+            "command": "docker compose up",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "docker compose build",
+            "type": "shell",
+            "command": "docker compose build",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "yii-migrate-up",
+            "type": "shell",
+            "command": "docker compose run php-cli php /var/www/html/yii migrate/up",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "yii-migrate-down",
+            "type": "shell",
+            "command": "docker compose run php-cli php /var/www/html/yii migrate/down",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "yii-migrate-create",
+            "type": "shell",
+            "command": "docker compose run php-cli php /var/www/html/yii migrate/create ${input:migrationName}",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "yii-run-action",
+            "type": "shell",
+            "command": "docker compose run php-cli php /var/www/html/yii ${input:actionName} ${input:actionArguments}",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "init",
+            "type": "shell",
+            "command": "docker compose run php-cli php /var/www/html/init",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "composer-install",
+            "type": "shell",
+            "command": "docker compose run php-cli composer install --working-dir=/var/www/html",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "composer-update",
+            "type": "shell",
+            "command": "docker compose run php-cli composer update --working-dir=/var/www/html",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "composer-require",
+            "type": "shell",
+            "command": "docker compose run php-cli composer require ${input:packageName} --working-dir=/var/www/html",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "migrationName",
+            "type": "promptString",
+            "description": "Enter the migration name:"
+        },
+        {
+            "id": "actionName",
+            "type": "promptString",
+            "description": "Enter the action name:"
+        },
+        {
+            "id": "actionArguments",
+            "type": "promptString",
+            "description": "Enter the arguments:"
+        },
+        {
+            "id": "packageName",
+            "type": "promptString",
+            "description": "Enter the Composer package name:"
+        }
+    ]
+}
