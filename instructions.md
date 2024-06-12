@@ -1,14 +1,14 @@
 
 ## Setting Up a Yii2 Environment with Docker
 
-Follow these comprehensive steps to prepare your Yii2 application development environment using Docker. This guide assumes you are using Visual Studio Code and the vscode tasks are included in the repo.
+Follow these steps to prepare your Yii2 application development environment using Docker. <br> 
+This guide assumes you are using Visual Studio Code and the vscode tasks are included in the repo.  <br>
+You can use [Tasks](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks) or any other similar extension to make running tasks easier. <br>
 If you're not using Visual Studio Code you can read the shell commands in `.vscode/tasks.json`
 
 ### Prerequisites
 
--   **Docker Desktop**: Install Docker Desktop on your machine.
-    -   **Windows/Mac**: Download from Docker Hub.
-    -   **Linux**: Follow the Docker Engine and Docker Compose installation instructions on Docker's website.
+-   **Docker Desktop**: Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) on your machine.
 
 ### Step-by-Step Guide
 
@@ -26,20 +26,23 @@ If you're not using Visual Studio Code you can read the shell commands in `.vsco
     
 
 #### 4. **Install Dependencies**
+-   **Get Git Token**: get one from [here](https://github.com/settings/tokens/new?scopes=&description=)
+
+-   **Set Git Token**: copy `/php-cli/Dockerfile-default` as `/php-cli/Dockerfile` and paste the token over YOUR_OAUTH_TOKEN 
 
 -   **Task Name**: `composer-install`    
 
 #### 5. **Initialize the Application**
 
--   **Task Name**: `init`    
+-   **Task Name**: `init` ( run as dev )
 
-#### 6. **Run Database Migrations**
+#### 6. **Launch the Docker Environment**
+
+-   **Task Name**: `docker compose-up`   
+
+#### 7. **Run Database Migrations**
 
 -   **Task Name**: `yii-migrate-up`    
-
-#### 7. **Launch the Docker Environment**
-
--   **Task Name**: `docker compose-up`    ù
 
 #### 8. **Create a user for the backend**
 

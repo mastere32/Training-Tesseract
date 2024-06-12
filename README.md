@@ -1,27 +1,37 @@
-There's a [task.md](task.md) and an [instructions.md](instructions.md) to help you get started.
-
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    <a href="https://www.tesseractechnologies.com/" target="_blank">
+        <img src="https://bc081af2.rocketcdn.me/wp-content/uploads/2024/02/tesseract-technologies-scuro.webp" height="100px">
     </a>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
+    <h1 align="center">MovieMate Project Template</h1>
     <br>
 </p>
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](https://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+There's a [task.md](task.md) and an [instructions.md](instructions.md) to help you get started.
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+If you have issues/questions don't hesitate to write at tecnico@tesseractechnologies.com.
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
+### What is this project about?
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![build](https://github.com/yiisoft/yii2-app-advanced/workflows/build/badge.svg)](https://github.com/yiisoft/yii2-app-advanced/actions?query=workflow%3Abuild)
+This is a test project for you to practice with Yii2 and Docker. <br>
+It's a simple movie database application that will be deployed using Docker. <br>
+The purpose of this project is to evaluate your attitude and skills in programming.
+
+
+### Useful tools
+
+You will find a task description in [task.md](task.md) and more detailed instructions in [instructions.md](instructions.md).
+
+Feel free to submit your work for review at tecnico@tesseractechnologies.com.
+
+
+Some useful documentation below:
+
+[MVC](https://yii2-cookbook-test.readthedocs.io/mvc/) - 
+[Migrations](https://yii2-framework.readthedocs.io/en/stable/guide/db-migrations/) - 
+[GII](https://www.yiiframework.com/doc/guide/2.0/en/start-gii) - 
+[API](https://www.yiiframework.com/doc/api/2.0)
+
 
 DIRECTORY STRUCTURE
 -------------------

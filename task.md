@@ -12,7 +12,7 @@ Digital Cinema Corp is poised to launch a cutting-edge web platform tailored for
 #### 1. Film Database
 
 -   **Design a Detailed Film Database:** Integrate a MariaDB database within the Yii2 framework to store extensive details about films, including titles, directors, actors, release dates, duration, genres, and ratings.
--   **External Data Integration:** Fetch additional movie data from the OMDB API to enrich our database offerings.
+-   **External Data Integration:** Fetch additional movie data from the OMDB API to enrich our database imformation.
 -   **Administrative Access:** Develop an administrative interface to simplify the process of adding new movies to the database.
 
 #### 2. User Engagement Features
@@ -28,7 +28,6 @@ Digital Cinema Corp is poised to launch a cutting-edge web platform tailored for
 #### 4. Security and Maintenance
 
 -   **Data Security:** Employ Yii2's security best practices to protect user data.
--   **Docker Integration:** Configure the development environment in Docker as per the provided guidelines to facilitate easy deployment, scalability, and maintenance.
 
 ### Technology Stack
 
@@ -48,4 +47,4 @@ Digital Cinema Corp is poised to launch a cutting-edge web platform tailored for
 2.  **Post-Feedback Implementation:**
     
     -   Begin project development post-feedback.
-    -   The Tesseract Technologies team will be monitoring your commits to your repo and answer any questions you send to the aforementioned email address.
+    -   The Tesseract Technologies team will be monitoring your commits to your fork of our repo and answer any questions you send to the aforementioned email address.
