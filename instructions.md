@@ -20,31 +20,35 @@ If you're not using Visual Studio Code you can read the shell commands in `.vsco
 
 -   Navigate to your project directory and copy `docker-compose-dev.yml` to `docker-compose.yml`.
 
-#### 3. **Build Docker Containers**
+#### 3. **Set Git Token**
 
--   **Task Name**: `docker compose build`
-    
-
-#### 4. **Install Dependencies**
 -   **Get Git Token**: get one from [here](https://github.com/settings/tokens/new?scopes=&description=)
 
 -   **Set Git Token**: copy `/php-cli/Dockerfile-default` as `/php-cli/Dockerfile` and paste the token over YOUR_OAUTH_TOKEN 
 
+
+#### 4. **Build Docker Containers**
+
+-   **Task Name**: `docker compose build`
+    
+
+#### 5. **Install Dependencies**
+
 -   **Task Name**: `composer-install`    
 
-#### 5. **Initialize the Application**
+#### 6. **Initialize the Application**
 
 -   **Task Name**: `init` ( run as dev )
 
-#### 6. **Launch the Docker Environment**
+#### 7. **Launch the Docker Environment**
 
 -   **Task Name**: `docker compose-up`   
 
-#### 7. **Run Database Migrations**
+#### 8. **Run Database Migrations**
 
 -   **Task Name**: `yii-migrate-up`    
 
-#### 8. **Create a user for the backend**
+#### 9. **Create a user for the backend**
 
 -   **Task Name**: `yii-run-action`    
 -   **Input**: `users/create`
